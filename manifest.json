@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Disable Background Video",
+  "description": "Turn off distracting background elements to focus solely on the video content, reducing eye strain.",
+  "version": "1.0.0",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/default.png"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+   {
+     "matches": ["https://www.youtube.com/*"],
+     "css": ["css/youtube/style.css"]
+   }
+ ]
+}
